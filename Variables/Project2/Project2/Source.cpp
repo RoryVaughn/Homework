@@ -11,5 +11,5 @@ int main()
 	{
 		x = 101;
 	}
-	
+	system ("pause");
 }
