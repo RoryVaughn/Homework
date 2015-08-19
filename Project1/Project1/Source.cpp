@@ -2,7 +2,7 @@
 int main()
 {
 	bool potato = 1;
-	if (potato != false)
+	if (potato = false)
 	{	
 		std::cout << "Worship the potato" << std::endl;
 		std::cin.get();
