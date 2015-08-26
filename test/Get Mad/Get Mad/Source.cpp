@@ -18,7 +18,7 @@ void dostuff()
 int main()
 {	
 	cout << "Enter your first name" << endl;
-	cin >> rory
+	cin >> Rory;
 	dostuff();
 
 
