@@ -5,19 +5,11 @@ const int h = 5;
 using namespace std;
 int main()
 {
-
+	
 	char name[i][h] = { {'m','y'},
 						{'n', 'a', 'm', 'e'},
 						{'i', 's'},
 						{'j', 'e', 'f', 'f'} };
-
-
-
-
-
-
-
-
 
 	for (int i = 0; i < 5; i++)
 	{
@@ -31,11 +23,6 @@ int main()
 		}
 		cout << endl;
 	}
-
-
-
-
-
 
 	system("pause");
 	return 0;
