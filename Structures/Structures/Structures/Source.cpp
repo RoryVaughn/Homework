@@ -3,8 +3,8 @@
 using namespace std;
 struct position
 {
-	float x;
-	float y;
+	float x = 75.3f;
+	float y = 5.37f;
 };
 
 struct velocity
