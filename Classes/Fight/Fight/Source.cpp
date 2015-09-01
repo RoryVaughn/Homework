@@ -95,6 +95,7 @@ void Fighter::printDamage()
 
 int main()
 {
+	
 	Fighter Fighter(10, 12, 7);
 	Fighter.printDamage();
 	system("pause");
