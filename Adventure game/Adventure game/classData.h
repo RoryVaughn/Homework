@@ -118,27 +118,99 @@ void Tank::Combat()
 	{
 		int h;
 		int randomNum;
-		cout << "Choose your attack  (1 = Block, 2 = Slash, 3 = Shield Bash \n";
+		cout << "Choose your attack  (1 = Block, 2 = Slash, 3 = Shield Bash) \n \n";
 		cin >> h;
-		randomNum = (rand() % 3) + 1)
+		randomNum = ((rand() % 3) + 1);
 		switch (h)
 		{
 		case 1:
 		{
-			cout << "You attempt to block the attack.";
-			
+			cout << "You attempt to block the attack. \n";
+			switch (randomNum)
+			{
+			case 1:
+			{
+				cout << "You succesfully block the attack!  \n \n";
+				cout << "Your health is: " << Tank.health << endl;
+				cout << "The Enemy's health is: " << Enemy.health << endl << endl;
+				break;
+			}
+			case 2:
+			{
+				cout << "The enemy accurately stabs around your block!  \n \n";
+				cout << "Your health is: " << Tank.health << endl;
+				cout << "The Enemy's health is: " << Enemy.health << endl << endl;
+				break;
+			}
+			case 3:
+			{
+				cout << "You both attempt to block an attack. \n Stop being bitches.  \n \n";
+				cout << "Your health is: " << Tank.health << endl;
+				cout << "The Enemy's health is: " << Enemy.health << endl << endl;
+				break;
+			}
+
+
+			}
 			break;
 		}
 		case 2:
 		{
-			cout << "You swing your sword diagonally.";
-
+			cout << "You swing your sword diagonally. \n";
+			switch (randomNum)
+			{
+			case 1:
+			{
+				cout << "You both make contact!  \n \n";
+				cout << "Your health is: " << Tank.health << endl;
+				cout << "The Enemy's health is: " << Enemy.health << endl << endl;
+				break;
+			}
+			case 2:
+			{
+				cout << "You hit and parry the enemy's stab!  \n \n";
+				cout << "Your health is: " << Tank.health << endl;
+				cout << "The Enemy's health is: " << Enemy.health << endl << endl;
+				break;
+			}
+			case 3:
+			{
+				cout << "Your Enemy blocks your attack!  \n \n";
+				cout << "Your health is: " << Tank.health << endl;
+				cout << "The Enemy's health is: " << Enemy.health << endl << endl;
+				break;
+			}
+			}
 			break;
 		}
 		case 3:
 		{
-			cout << "You bash your Enemy with your shield.";
+			cout << "You bash your Enemy with your shield. \n";
+			switch (randomNum)
+			{
+			case 1:
+			{
+				cout << "You block the stab and hit your enemy with your shield! \n \n";
+				cout << "Your health is: " << Tank.health << endl;
+				cout << "The Enemy's health is: " << Enemy.health << endl << endl;
+				break;
+			}
+			case 2:
+			{
+				cout << "You run into your enemy's sword \n \n";
+				cout << "Your health is: " << Tank.health << endl;
+				cout << "The Enemy's health is: " << Enemy.health << endl << endl;
+				break;
+			}
+			case 3:
+			{
+				cout << "You knco your enemy over with brute force! \n \n";
 
+				cout << "Your health is: " << Tank.health << endl;
+				cout << "The Enemy's health is: " << Enemy.health << endl << endl;
+				break;
+			}
+			}
 			break;
 		}
 
