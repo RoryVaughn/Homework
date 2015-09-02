@@ -120,8 +120,12 @@ void Tank::Combat()
 	{
 		int h;
 		int randomNum;
-		int damage;
+		int damageSlash = 10;
+		int damageShield = 5;
+		int eDamageSlash = 10;
+		int edamageStab = 5;
 		int blockage;
+		int damage;
 		int edamage;
 		int eblockage;
 		cout << "Choose your attack  (1 = Block, 2 = Slash, 3 = Shield Bash) \n \n";
@@ -130,12 +134,13 @@ void Tank::Combat()
 		blockage = (edamage - Tank.armor);
 		eblockage = (damage - Enemy.armor);
 
+
 		switch (h)
 		{
 		case 1:
 		{
 			cout << "You attempt to block the attack. \n";
-			damage = Block;
+			
 			switch (randomNum)
 			{
 			case 1:
@@ -148,6 +153,7 @@ void Tank::Combat()
 			case 2:
 			{
 				cout << "The enemy accurately stabs around your block!  \n \n";
+				
 				Tank.health = (Tank.health - blockage);
 				Enemy.health = (Enemy.health - eblockage);
 				cout << "Your health is: " << Tank.health << endl;
@@ -176,6 +182,7 @@ void Tank::Combat()
 			case 1:
 			{
 				cout << "You both make contact!  \n \n";
+				
 				Tank.health = (Tank.health - blockage);
 				Enemy.health = (Enemy.health - eblockage);
 				cout << "Your health is: " << Tank.health << endl;
@@ -204,7 +211,7 @@ void Tank::Combat()
 		case 3:
 		{
 			cout << "You bash your Enemy with your shield. \n";
-			damage = ShieldBash;
+			
 			switch (randomNum)
 			{
 			case 1:
