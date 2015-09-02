@@ -153,7 +153,7 @@ void Tank::Combat()
 			case 2:
 			{
 				cout << "The enemy accurately stabs around your block!  \n \n";
-				
+			
 				Tank.health = (Tank.health - blockage);
 				Enemy.health = (Enemy.health - eblockage);
 				cout << "Your health is: " << Tank.health << endl;
@@ -295,8 +295,12 @@ void Assasin::Combat1()
 	{
 		int h;
 		int randomNum;
-		int damage;
+		int damageSlash = 10;
+		int damageShield = 5;
+		int eDamageSlash = 10;
+		int edamageStab = 5;
 		int blockage;
+		int damage;
 		int edamage;
 		int eblockage;
 		cout << "Choose your attack  (1 = Block, 2 = Slash, 3 = Shield Bash) \n \n";
@@ -450,8 +454,12 @@ void Warrior::Combat2()
 	{
 		int h;
 		int randomNum;
-		int damage;
+		int damageSlash = 10;
+		int damageShield = 5;
+		int eDamageSlash = 10;
+		int edamageStab = 5;
 		int blockage;
+		int damage;
 		int edamage;
 		int eblockage;
 		cout << "Choose your attack  (1 = Block, 2 = Slash, 3 = Shield Bash) \n \n";
