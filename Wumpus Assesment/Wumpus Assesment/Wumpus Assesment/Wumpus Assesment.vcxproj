@@ -18,9 +18,15 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Wumpus.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Wumpus.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{58E0506F-672A-4A0D-B82A-9DBAD551B125}</ProjectGuid>
-    <RootNamespace>Wompusassesmeent</RootNamespace>
+    <ProjectGuid>{F43C0CDF-1155-4991-9667-E409DCEBB97C}</ProjectGuid>
+    <RootNamespace>WumpusAssesment</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -117,12 +123,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Source.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Wompus.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
