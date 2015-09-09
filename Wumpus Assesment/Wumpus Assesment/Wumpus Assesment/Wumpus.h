@@ -9,7 +9,5 @@ struct Player
 	string name;
 	bool Alive;
 	int pos (int x, int y);
-
-
-
+	
 };
