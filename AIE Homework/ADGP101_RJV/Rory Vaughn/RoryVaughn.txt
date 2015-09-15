@@ -1,0 +1,411 @@
+#ifndef WUMPUS_H
+#define WUMPUS_H
+//Rory Vaughn
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Player
+{
+	string name;
+	bool Alive;
+	int Pos_X = 0;
+	int Pos_Y = 0;
+	int Direction;
+
+};
+struct Object
+{
+	string name;
+	bool Exist;
+	int E_Pos_X;
+	int E_Pos_Y;
+	
+};
+class Robot
+{
+public:
+	Robot(int, int, int);
+	void Gameplay();
+
+private:
+	int Pos_X;
+	int Pos_Y;
+	int Direction;
+};
+Robot::Robot(int x, int y, int d)
+{
+	int Pos_X = x;
+	int Pos_Y = y;
+	int Direction = d;
+}
+
+void Robot::Gameplay()
+{
+	Player Robot;
+	Robot.Alive = 1;
+	Robot.Pos_X = 0;
+	Robot.Pos_Y = 0;
+	Robot.Direction = 8;
+	Object Pit;
+	Pit.Exist = 1;
+	Pit.E_Pos_X = 1;
+	Pit.E_Pos_Y = 3;
+	
+	Object Pit2;
+	Pit2.Exist = 1;
+	Pit2.E_Pos_X = 3;
+	Pit2.E_Pos_Y = 1;
+	
+	Object Wumpus;
+	Wumpus.Exist = 1;
+	Wumpus.E_Pos_X = 2;
+	Wumpus.E_Pos_Y = 1;
+	Object Gold;
+	Gold.Exist = 1;
+	Gold.E_Pos_X = 3;
+	Gold.E_Pos_Y = 3;
+
+	int arrow = 1;
+
+	while (Robot.Alive == true)
+	{
+	int input;
+	cin >> input;
+	
+	
+	
+		switch (input)
+		{
+		case 8:
+		{
+			
+			cout << "You face North." << endl;
+			Robot.Direction = 8;
+			break;
+		}
+		case 2:
+		{
+			
+			cout << "You face South." << endl;
+			Robot.Direction = 2;
+			break;
+		}
+		case 4:
+		{
+			
+			cout << "You face West." << endl;
+			Robot.Direction = 4;
+			break;
+		}
+		case 6:
+		{
+			
+			cout << "You face East." << endl;
+			Robot.Direction = 6;
+			break;
+		}
+		case 5:
+		{
+			
+			if (arrow == 1)
+			{
+				cout << "You shoot the arrow." << endl;
+				arrow = arrow - 1;
+				if (Robot.Pos_X == 1)
+				{
+					if (Robot.Pos_Y == 1)
+					{
+						if (Robot.Direction = 6)
+						{
+							cout << "You killed the Wumpus" << endl;
+							Wumpus.Exist = Wumpus.Exist - 1;
+						}
+					}
+				}
+				else if (Robot.Pos_X == 2)
+				{
+					if (Robot.Pos_Y == 0)
+					{
+						if (Robot.Direction = 8)
+						{
+							cout << "You killed the Wumpus" << endl;
+							Wumpus.Exist = Wumpus.Exist - 1;
+						}
+					}
+				}
+				else if (Robot.Pos_X == 2)
+				{
+					if (Robot.Pos_Y == 2)
+					{
+						if (Robot.Direction = 2)
+						{
+							cout << "You killed the Wumpus" << endl;
+							Wumpus.Exist = Wumpus.Exist - 1;
+						}
+					}
+				}
+				else
+				{
+					cout << "Your arrow misses." << endl;
+				}
+			}
+			else
+			{
+				cout << "You have no more arrows." << endl;
+			}
+			break;
+		}
+		case 0:
+		{
+			switch (Robot.Direction)
+			{
+			case 2: 
+			{
+				Robot.Pos_Y = Robot.Pos_Y--;
+				cout << "you new position is (" << Robot.Pos_X << ", " << Robot.Pos_Y << ")" << endl;
+				break;
+			}
+			case 4:
+			{
+				Robot.Pos_X = Robot.Pos_X--;
+				cout << "you new position is (" << Robot.Pos_X << ", " << Robot.Pos_Y << ")" << endl;
+				break;
+			}
+			case 6:
+			{
+				Robot.Pos_X = Robot.Pos_X++;
+				cout << "you new position is (" << Robot.Pos_X << ", " << Robot.Pos_Y << ")" << endl;
+				break;
+			}
+			case 8:
+			{
+				Robot.Pos_Y = Robot.Pos_Y++;
+				cout << "you new position is (" << Robot.Pos_X << ", " << Robot.Pos_Y << ")" << endl;
+				break;
+			}
+			}
+			break;
+		}
+		default:
+		{
+			cout << "Incorrect input \nPlease enter a number listed in the controls." << endl;
+		}
+		}
+		
+		if (Gold.Exist == true)
+		{
+			if (Robot.Pos_X == 2)
+			{
+
+				if (Robot.Pos_Y == 3)
+				{
+					cout << "You see some glitter" << endl;
+				}
+			}
+			if (Robot.Pos_X == 3)
+			{
+
+				if (Robot.Pos_Y == 2)
+				{
+					cout << "You see some glitter" << endl;
+				}
+			}
+
+			if (Robot.Pos_X == 1)
+			{
+
+				if (Robot.Pos_Y == 2)
+				{
+					cout << "You feel a slight breeze" << endl;
+				}
+			}
+			if (Robot.Pos_X == 0)
+			{
+
+				if (Robot.Pos_Y == 3)
+				{
+					cout << "You feel a slight breeze" << endl;
+				}
+			}
+			if (Robot.Pos_X == 2)
+			{
+
+				if (Robot.Pos_Y == 3)
+				{
+					cout << "You feel a slight breeze" << endl;
+				}
+			}
+			if (Robot.Pos_X == 2)
+			{
+
+				if (Robot.Pos_Y == 1)
+				{
+					cout << "You feel a slight breeze" << endl;
+				}
+			}
+			if (Robot.Pos_X == 3)
+			{
+				if (Robot.Pos_Y == 0)
+				{
+					cout << "You feel a slight breeze" << endl;
+				}
+				if (Robot.Pos_Y == 2)
+				{
+					cout << "You feel a slight breeze" << endl;
+				}
+			
+		}
+			if (Robot.Pos_X == Gold.E_Pos_X)
+			{
+				if (Robot.Pos_Y == Gold.E_Pos_Y)
+				{
+					cout << "You Found the Gold! \nGo back to the starting square to win!" << endl;
+					cout << "Be careful.You will no longer be able to sense the traps." << endl;
+					Gold.Exist = 0;
+				}
+				
+			}
+		}
+		if (Gold.Exist == 0)
+		{
+			
+			if (Robot.Pos_X == 0)
+			{
+				if (Robot.Pos_Y == 0)
+				{
+					cout << "You won!\n" << endl;
+					break;
+
+
+				}
+			}
+		}
+		
+		if (Robot.Pos_X >= 4 || Robot.Pos_X < 0)
+		{
+			cout << "You went out of the grid and died!" << endl;
+			Robot.Alive = false;
+			break;
+		}
+		if (Robot.Pos_Y >= 4 || Robot.Pos_Y < 0)
+		{
+			cout << "You went out of the grid and died!" << endl;
+			Robot.Alive = false;
+			break;
+		}
+		if (Robot.Pos_X == 1)
+		{
+			if (Robot.Pos_Y == 3)
+			{
+				cout << "You fell into the Wumpus' trap and died!!" << endl;
+				Robot.Alive = false;
+				break;
+
+			}
+
+		}
+		if (Wumpus.Exist == 1)
+		{ 
+			if (Robot.Pos_X == 1)
+			{
+				if (Robot.Pos_Y == 1)
+				{
+					cout << "You smell a terrible smell." << endl;
+				}
+			}
+			if (Robot.Pos_X == 2)
+			{
+				if (Robot.Pos_Y == 2)
+				{
+					cout << "You smell a terrible smell." << endl;
+				}
+				if (Robot.Pos_Y == 1)
+				{
+					cout << "You were slain by the Wumpus!" << endl;
+					Robot.Alive = false;
+
+				}
+				if (Robot.Pos_Y == 0)
+				{
+					cout << "You smell a terrible smell." << endl;
+				}
+			}
+		}
+		if (Robot.Pos_X == 3)
+		{
+			
+			if (Robot.Pos_Y == 1)
+			{
+				cout << "You fell into the Wumpus' trap and died!" << endl;
+				Robot.Alive = false;
+				break;
+			}
+			
+
+		}
+	}
+}
+
+#endif WUMPUS_H
+//#######################################################################
+
+#include "Wumpus.h"
+
+void MakeGrid()
+{
+	const int i = 4;
+	const int h = 4;
+	int grid[i][h] = {};
+
+
+	for (int i = 0; i < 4; i++)
+	{
+		for (int h = 0; h < 4; h++)
+		{
+			
+		}
+		
+	}
+}
+
+
+int main()
+{ 
+	cout << "Welcome to Wumpus World! \nYou can travel in a 4x4 grid of squares.\nWatch out for the Wumpus and the Traps he set up!\n";
+	cout << "Controls : \n8: Face North, 2: Face South, 4: Face West, \n";
+	cout << "6: Face East, 5: Shoot the arrow, \n0: Move in the direction the character is facing. \n \n" << endl;
+	cout << "Your journey for gold begins in the square (0,0), facing North.\n " << endl; 
+
+		MakeGrid(); //the fuction uses nested loops and an array to create a 2D grid.
+		int start = 1;
+		switch (start)
+		{
+		case 1:
+		{Robot Robot(0, 0, 8);
+		Robot.Gameplay();
+		break;
+
+		}
+
+		}
+		int retry;
+		cout << "enter 1 to retry or anything else to quit." << endl;
+		cin >> retry;
+		switch (retry)
+		{
+		case 1:
+		{
+			{system("cls");
+				return main(); }
+		}
+		default:
+		{return 0; }
+	
+		}
+	system("pause"); //this line of code allows the console to stay open after the game is over.
+	
+	return 0;
+}
+
