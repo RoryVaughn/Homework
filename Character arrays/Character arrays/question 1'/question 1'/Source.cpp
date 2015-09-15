@@ -2,6 +2,15 @@
 #include <string>
 using namespace std;
 
+
+
+
+//// If you cannot do the following problem please see me or a T.A. 
+//This is to be started in the first hour of class by yourself, DO NOT ask another student how to solve this problem.
+//1a) Write a function that converts a string to it's ASCII equivalent.
+//1b) For every last letter of that string replace it with a smiley face emoji. (Its in the ASCII chart)
+//2) Use this function, in some way, populate a 2D array that will contain your first middle and last name as their ASCII equivalents.I say somehow as different implementations could do different things.As long as you are writing your own code and accomplishing this task you will have passed this part of the assessment.
+//Skills Required : Loops, Variable Assignment, Character Manipulation, Functions, Conditionals.
 int main()
 {
 	char name1[30];
