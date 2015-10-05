@@ -73,8 +73,6 @@ void Robot::Gameplay()
 	int input;
 	cin >> input;
 	
-	
-	
 		switch (input)
 		{
 		case 8:

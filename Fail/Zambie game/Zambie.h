@@ -262,6 +262,18 @@ void Zombie::Gameplay()
 				}
 
 			}
+			if (Zombie.Pos_X == 3)
+			{
+
+				if (Zombie.Pos_Y == 1)
+				{
+					cout << "You " << endl;
+					Zombie.Alive = false;
+					break;
+				}
+
+
+			}
 
 
 

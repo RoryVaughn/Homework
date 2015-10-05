@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{02AD896E-2089-4628-BBA5-63AEB07CACDC}</ProjectGuid>
-    <RootNamespace>Adventuregame</RootNamespace>
+    <ProjectGuid>{7F75F000-39BB-4545-BA9E-7CE568701EDF}</ProjectGuid>
+    <RootNamespace>RetroGame</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -118,10 +118,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source.cpp" />
+    <ClInclude Include="Retro.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="classData.h" />
+    <ClCompile Include="Retro.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
