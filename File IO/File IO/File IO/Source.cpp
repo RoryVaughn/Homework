@@ -51,7 +51,7 @@ int main() {
 					getline(myfile, stuff);//gathers info in the text file.
 					cout << stuff << endl;//prints the contents of the text file to the screen of the console,
 				}
-				myfile.close();
+				myfile.close(); // function that closes the file.
 			}
 			else
 			{
@@ -77,7 +77,7 @@ int main() {
 				}
 				
 			}
-			myfile.close();
+			myfile.close(); // this function closes the file
 			
 		
 	}
@@ -92,7 +92,7 @@ int main() {
 			myfile << empty << endl;//applies a blank string to file, essentially overiding and deleting it.
 
 		}
-		myfile.close();
+		myfile.close(); // this function closes the file
 		system("cls");
 	}
 	break;
@@ -102,7 +102,7 @@ int main() {
 	}
 	break;
 	}
-	system("pause");
+	system("pause"); // this code will pause the code and allow the window to remain open after the code is completed
 	
 	
 	return 0;

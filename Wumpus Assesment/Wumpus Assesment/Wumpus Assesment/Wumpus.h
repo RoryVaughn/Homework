@@ -1,10 +1,12 @@
 #ifndef WUMPUS_H
 #define WUMPUS_H
-
+// Name :: Rory Vaughn
+//Assignment :: Assessment #2
+//Teacher :: Matthew Williamson
+//Date :: 10/13/2015
 #include <iostream>
 #include <string>
 using namespace std;
-
 struct Player
 {
 	string name;
@@ -39,7 +41,6 @@ Robot::Robot(int x, int y, int d)
 	int Pos_Y = y;
 	int Direction = d;
 }
-
 void Robot::Gameplay()
 {
 	Player Robot;
@@ -342,5 +343,4 @@ void Robot::Gameplay()
 		}
 	}
 }
-
 #endif WUMPUS_H
