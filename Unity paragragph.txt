@@ -1,0 +1,9 @@
+Rory Vaughn
+10/12/2015
+Unity
+
+Unity is a game engine Unity Technologies and can be used to develop game for quite a few platforms.
+It is an easy software to use and alllows you to use different coding languages and assets to create games.
+In the tutorial, I created a game with a ball to creat a small game that allowed the player to roll the ball
+ around and collect squares for points. I used the colliders to ensure that the shapes interacted correctly.
+I also got a refresher of my previous experience in C#.

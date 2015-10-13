@@ -22,8 +22,8 @@ int main()
 	//{
 	//	return a > b;
 	//}
-	template<typename T>
-	bool(T c, T d)
+	template<typename I>
+	bool compare(I c, I d)
 	{
 		if (c < d)
 		{
@@ -44,15 +44,15 @@ int main()
 	//	}
 	//	else
 	//	{
-	//		return d;
+	//		return d
 	//	}
 	//};
 
 	////
 	template<typename T>
-	bool(T e, T f)
+	bool add(T e, T f)
 	{
-		int add(T e, T f)
+		int WW(T e, T f);
 			return(e + f);
 	};
 

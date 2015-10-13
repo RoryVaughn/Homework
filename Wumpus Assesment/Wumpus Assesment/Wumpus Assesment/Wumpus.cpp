@@ -7,9 +7,9 @@ void MakeGrid()
 	int grid[i][h] = {};
 
 
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < 5; i++)
 	{
-		for (int h = 0; h < 4; h++)
+		for (int h = 0; h < 5; h++)
 		{
 			
 		}
@@ -19,13 +19,18 @@ void MakeGrid()
 
 
 int main()
-{ 
-	cout << "Welcome to Wumpus World! \nYou can travel in a 4x4 grid of squares.\nWatch out for the Wumpus and the Traps he set up!\n";
+{
+	cout << "-------------------------------------------------------------------------------" << endl;
+	cout << "Welcome to Wumpus World! \nYou can travel in a 5x5 grid of squares. Starting at (0,0) \nWatch out for the Wumpus and the traps he set up!\n";
+	cout << "-------------------------------------------------------------------------------" << endl;
 	cout << "Controls : \n8: Face North, 2: Face South, 4: Face West, \n";
-	cout << "6: Face East, 5: Shoot the arrow, \n0: Move in the direction the character is facing. \n \n" << endl;
+	cout << "6: Face East, 5: Shoot the arrow, \n0: Move in the direction the character is facing." << endl;
+	cout << "-------------------------------------------------------------------------------" << endl;
+	cout << "-------------------------------------------------------------------------------" << endl;
 	cout << "Your journey for gold begins in the square (0,0), facing North.\n " << endl; 
+	cout << "-------------------------------------------------------------------------------" << endl;
 
-		MakeGrid(); //the fuction uses nested loops and an array to create a 2D grid.
+		void MakeGrid();//the fuction uses nested loops and an array to create a 2D grid.
 		int start = 1;
 		switch (start)
 		{
@@ -38,7 +43,7 @@ int main()
 
 		}
 		int retry;
-		cout << "enter 1 to retry or anything else to quit." << endl;
+		cout << "Enter 1 to retry or anything else to quit." << endl;
 		cin >> retry;
 		switch (retry)
 		{
