@@ -64,7 +64,7 @@ void Robot::Gameplay()
 	Gold.E_Pos_X = 3;
 	Gold.E_Pos_Y = 3;
 
-	int arrow = 2;
+	int arrow = 2; // keeps track of the ammunition of the 
 
 	while (Robot.Alive == true) //this is what tells the game to continue to take input from the user.
 	{

@@ -9,7 +9,8 @@
 //	if (file.is_open())
 //	{
 //		//Safe to write to file
-//		file << "Hello World" << endl;//		
+//		file << "Hello World" << endl;
+//		
 //	}file.close();
 //	system("pause");
 //	return 0;
@@ -32,9 +33,6 @@
 #include <string>
 #include <fstream>
 using namespace std;
-
-
-
 int main() {
 	int select;//this variable collects the input for the function the user wants to select.
 	cout << "Select the function you wnat to use \n1 = Display, 2 = write, 3 = clear, 4 = exit" << endl;
@@ -52,7 +50,6 @@ int main() {
 				{
 					getline(myfile, stuff);//gathers info in the text file.
 					cout << stuff << endl;//prints the contents of the text file to the screen of the console,
-
 				}
 				myfile.close();
 			}
@@ -76,7 +73,9 @@ int main() {
 				{
 					
 					getline(cin, write);//gathers all the information in order to print write it to the text file.
-					myfile << write << endl;				}				
+					myfile << write << endl;
+				}
+				
 			}
 			myfile.close();
 			

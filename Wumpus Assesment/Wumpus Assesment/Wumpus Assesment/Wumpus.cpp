@@ -1,5 +1,4 @@
 #include "Wumpus.h"
-
 void MakeGrid()
 {
 	const int i = 4;
@@ -16,8 +15,6 @@ void MakeGrid()
 		
 	}
 }
-
-
 int main()
 {
 	cout << "-------------------------------------------------------------------------------" << endl;
@@ -60,5 +57,3 @@ int main()
 	
 	return 0;
 }
-
-
