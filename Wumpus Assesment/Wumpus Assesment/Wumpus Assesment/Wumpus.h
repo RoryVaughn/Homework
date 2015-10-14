@@ -187,7 +187,10 @@ void Robot::Gameplay()
 		}
 		default:
 		{
+			//i want to make this not break the game if too much data is entered.
+			//currently it sends the game into a never-ending loop if a letter or a high number value is entered
 			cout << "Incorrect input \nPlease enter a number listed in the controls." << endl; // this inhibits the user from entering input that could possibly bug the game.
+			break;
 		}
 		}
 		
@@ -278,7 +281,6 @@ void Robot::Gameplay()
 				}
 			}
 		} 
-		
 		if (Robot.Pos_X >= 5 || Robot.Pos_X < 0) 
 		{
 			cout << "You went out of the grid and died!" << endl;
