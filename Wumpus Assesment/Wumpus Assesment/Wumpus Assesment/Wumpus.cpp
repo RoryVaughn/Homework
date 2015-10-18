@@ -23,11 +23,13 @@ int main()
 	cout << "Controls : \n8: Face North, 2: Face South, 4: Face West, \n";
 	cout << "6: Face East, 5: Shoot the arrow, \n0: Move in the direction the character is facing." << endl;
 	cout << "-------------------------------------------------------------------------------" << endl;
+	cout << "You can enter 1 to view this again." << endl;
 	cout << "-------------------------------------------------------------------------------" << endl;
 	cout << "Your journey for gold begins in the square (0,0), facing North.\n " << endl; 
 	cout << "-------------------------------------------------------------------------------" << endl;
 
 		void MakeGrid();//the fuction uses nested loops and an array to create a 2D grid.
+
 		int start = 1;
 		switch (start)
 		{

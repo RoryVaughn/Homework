@@ -74,6 +74,25 @@ void Robot::Gameplay()
 	
 		switch (input)
 		{
+		case 1:
+		{
+			myfile.open("MyLog.txt");
+			if (myfile.is_open())
+			{
+				while (!myfile.eof())
+				{
+					getline(myfile, stuff);//gathers info in the text file.
+					cout << stuff << endl;//prints the contents of the text file to the screen of the console,
+				}
+				myfile.close(); // function that closes the file.
+			}
+			else
+			{
+				cout << "we messed up";
+			}
+		
+		break;
+		}
 		case 8:
 		{
 			
