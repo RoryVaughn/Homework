@@ -6,6 +6,7 @@
 //Date :: 10/13/2015
 #include <iostream>
 #include <string>
+#include <fstream>
 using namespace std;
 struct Player
 {
@@ -76,7 +77,9 @@ void Robot::Gameplay()
 		{
 		case 1:
 		{
-			myfile.open("MyLog.txt");
+			ifstream myfile;
+			string stuff;
+			myfile.open("helpwump.txt");
 			if (myfile.is_open())
 			{
 				while (!myfile.eof())
